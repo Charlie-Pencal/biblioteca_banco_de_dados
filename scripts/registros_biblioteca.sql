@@ -1,3 +1,4 @@
+#populando endereços das pessoas usando o insert into, o nome da tabela e colocando os valores de cada coluna respectivamente na ordem em que aparece.
 INSERT INTO
 	ENDERECO
 VALUES
@@ -12,6 +13,7 @@ VALUES
 	(9,'82310220','Rua Joana Z. Kurek',567,'nenhum','São Braz','Curitiba','Paraná','Brasil'),
 	(10,'81900240','Rua Arapoti',765,'nenhum','Sitio Cercado','Curitiba','Paraná','Brasil');
 
+#populando os endereçoes das editoras ficticias.
 INSERT INTO 
 	ENDERECO 
 VALUES
@@ -20,12 +22,13 @@ VALUES
 	(13,'83327146','Rua dos Flamingos',555,'nenhum','Alphaville Graciosa','Pinhais','Paraná','Brasil'),
 	(14,'85507140','Rua Taubaté',333,'nada','São Roque','Pato Branco','Paraná','Brasil');
 
-
+#populado um registro de editoras primeiro para testar.
 INSERT INTO
 	EDITORAS
 VALUES
 	(1,'Editora Vera Cruz LTDA','LeYa','14120675000189',14);
     
+#populado os registros das editoras, optei por deixar apenas 4 registros pois uma editora pode ter mais de um livro.
 INSERT INTO
 	EDITORAS
 VALUES
@@ -33,6 +36,7 @@ VALUES
 	(3,'Annunziato Sousa LTDA','Annunziato','93435564000138',12),
 	(4,'Editora Macário Moura LTDA','Macário','27673817000187',11);
     
+#populado os registros de pessoas. Tanto autores quanto usuarios.
 INSERT INTO
 	PESSOAS
 VALUES
@@ -47,6 +51,7 @@ VALUES
 	(9,'Kauê Gonçalves Mayerhofer','22825180556','1951-04-04','brasileira','kaue.mayerhofer@geradornv.com.br',9),
 	(10,'Débora Marques Lopez','87105339233','1983-06-08','brasileira','debora.lopez@geradornv.com.br',10);
     
+#populado os registros das senhas dos usuarios.
 INSERT INTO
 	USUARIO
 VALUES
@@ -56,6 +61,7 @@ VALUES
 	(4,229622,4),
 	(5,436242,5);
     
+#populado os registros sobre a quantidade de livros de cada autor até então.
 INSERT INTO
 	AUTORES
 VALUES
@@ -65,6 +71,7 @@ VALUES
 	(4,1,9),
 	(5,1,10);
 
+#populado os registros dos livros que tem até então e se estão disponiveis para emprestimo utilizando valor de 0 ou 1 para indicar se a informação de disponivel é falso ou verdadeira e quais são seus autores e editora com base nas suas foreign keys.
 INSERT INTO
 	LIVROS
 VALUES
