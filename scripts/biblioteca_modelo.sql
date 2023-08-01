@@ -22,16 +22,15 @@ CREATE TABLE IF NOT EXISTS `livros` (
   'Autoajuda',
   'Historia'),
   `qtd_paginas` int,
+  `disponivel` boolean DEFAULT true,
   `id_autores_fk` int,
-  `id_editoras_fk` int,
-  `id_status_fk` int
+  `id_editoras_fk` int
 );
 
 CREATE TABLE IF NOT EXISTS `autores` (
   `id` int PRIMARY KEY,
   `qtd_livros` int,
-  `id_pessoas_fk` int,
-  `id_livros_fk` int
+  `id_pessoas_fk` int
 );
 
 CREATE TABLE IF NOT EXISTS `editoras` (
@@ -70,16 +69,11 @@ CREATE TABLE IF NOT EXISTS `endereco` (
   `pais` varchar(50)
 );
 
-CREATE TABLE IF NOT EXISTS `status` (
-  `id` int PRIMARY KEY,
-  `disponivel` boolean DEFAULT true
-);
-
 
 
 ALTER TABLE `livros` ADD FOREIGN KEY (`id_editoras_fk`) REFERENCES `editoras` (`id`);
 
-ALTER TABLE `livros` ADD FOREIGN KEY (`id_status_fk`) REFERENCES `status` (`id`);
+ALTER TABLE `livros` ADD FOREIGN KEY (`id_autores_fk`) REFERENCES `autores` (`id`);
 
 ALTER TABLE `autores` ADD FOREIGN KEY (`id_pessoas_fk`) REFERENCES `pessoas` (`id`);
 
